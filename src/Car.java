@@ -1,0 +1,32 @@
+
+public class Car {
+	
+	int maxSpeed = 100;
+	int minSpeed = 0;
+	double weight = 4079;
+	boolean isTheCarOn = false;
+	char condition = 'A';
+	
+	
+	// public: scope of the function
+	// void: return type of the 
+	public void printVariables() {
+		System.out.println("Max speed = " + maxSpeed);
+		// println tells to print this out and then print the next thing 
+		// on the next line
+		System.out.println("Min speed = " + minSpeed);
+		System.out.println("Weight = " + weight);
+		System.out.println("Is the car on = " + isTheCarOn);
+		System.out.println("Condition of the car = " + condition);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Car myCar = new Car();
+		
+		myCar.printVariables();
+
+	}
+
+}
