@@ -20,12 +20,26 @@ public class Car {
 		System.out.println("Condition of the car = " + condition);
 	}
 
+	public void wreckCar() {
+		condition = 'C';
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Car myCar = new Car();
+		Car familyCar = new Car();
 		
-		myCar.printVariables();
+		familyCar.printVariables();
+		
+		Car aliceCar = familyCar; // here we are equating a reference of familyCar to aliceCar
+		
+		aliceCar.wreckCar();
+		
+		System.out.println("Family car after the wreck");
+		familyCar.printVariables();
+		
+		System.out.println("Alice's car after the wreck");
+		aliceCar.printVariables();
 
 	}
 
