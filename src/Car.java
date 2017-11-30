@@ -6,6 +6,8 @@ public class Car {
 	double weight = 4079;
 	boolean isTheCarOn = false;
 	char condition = 'A';
+	String nameOfCar = "Honda";
+	/*In Java char with single quotes, String with double quotes*/
 	
 	
 	// public: scope of the function
@@ -18,6 +20,7 @@ public class Car {
 		System.out.println("Weight = " + weight);
 		System.out.println("Is the car on = " + isTheCarOn);
 		System.out.println("Condition of the car = " + condition);
+		System.out.println("Name of the car = " + nameOfCar);
 	}
 
 	public void wreckCar() {
