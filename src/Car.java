@@ -1,3 +1,4 @@
+import javax.security.auth.x500.X500Principal;
 
 public class Car {
 	
@@ -84,6 +85,20 @@ public class Car {
 		birthdayCar.getOut();
 		System.out.println("Birthday Car v3");
 		birthdayCar.printVariables();
+		
+		System.out.println(" ");
+		
+		int x = 5;
+		int yPost, yPre;
+		
+		System.out.println("xBefore = " + x);
+		System.out.println("");
+		yPost = x++;
+		System.out.println("xIntermediate = " + x);
+		System.out.println("yPost = " + yPost);
+		yPre = ++x;
+		System.out.println("xAfter = " + x);
+		System.out.println("yPre = " + yPre);
 		
 //		System.out.println("Chirstmas Car");
 //		Car christmasCar = new Car(500,  2000, false);
