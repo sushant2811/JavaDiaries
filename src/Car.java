@@ -1,14 +1,33 @@
 
 public class Car {
 	
-	int maxSpeed = 100;
+	int maxSpeed;
 	int minSpeed = 0;
+	
 	double weight = 4079;
+	
 	boolean isTheCarOn = false;
 	char condition = 'A';
 	String nameOfCar = "Honda";
 	/*In Java char with single quotes, String with double quotes*/
 	
+	double maxFuel = 16;
+	double currentFuel = 8;
+	double mpg = 26.4;
+	
+	int numberOfPeopleInCar = 1;
+	
+	// All the above variables are called instance variables. Set to default currently.
+	
+	// This is where we add the constructor by convention (after the instance variables)
+	// Below we use constructor to change default values. We can use all or subset of instance 
+	// variables as parameters for constructors. 
+	public Car(int customMaxSpeed, double customWeight, boolean customIsTheCarOn) {
+		maxSpeed = customMaxSpeed;
+		weight = customWeight;
+		isTheCarOn = customIsTheCarOn;
+		
+	}
 	
 	// public: scope of the function
 	// void: return type of the 
@@ -29,21 +48,10 @@ public class Car {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		// Main function is where you make everything
 		
-		Car familyCar = new Car();
-		
-		familyCar.printVariables();
-		
-		Car aliceCar = familyCar; // here we are equating a reference of familyCar to aliceCar
-		
-		aliceCar.wreckCar();
-		
-		System.out.println("Family car after the wreck");
-		familyCar.printVariables();
-		
-		System.out.println("Alice's car after the wreck");
-		aliceCar.printVariables();
-
+		Car birthdayCar = new Car(200, 5000.54, true);
+		birthdayCar.printVariables();
 	}
 
 }
