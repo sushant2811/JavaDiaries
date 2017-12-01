@@ -50,8 +50,15 @@ public class Car {
 		// TODO Auto-generated method stub
 		// Main function is where you make everything
 		
+		System.out.println("Birthday Car");
 		Car birthdayCar = new Car(200, 5000.54, true);
 		birthdayCar.printVariables();
+		
+		System.out.println(" ");
+		
+		System.out.println("Chirstmas Car");
+		Car christmasCar = new Car(500,  2000, false);
+		christmasCar.printVariables();
 	}
 
 }
