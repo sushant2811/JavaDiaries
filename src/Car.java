@@ -86,7 +86,9 @@ public class Car {
 	}
 	
 	public void turnCarOn() {
+		// If the car isn't on...
 		if (!isTheCarOn){
+			// turn it on
 			isTheCarOn = true;
 		}
 		else
