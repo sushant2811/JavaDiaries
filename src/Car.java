@@ -17,10 +17,15 @@ public class Car {
 	double mpg = 26.4;
 	
 	int numberOfPeopleInCar = 1;
+	int maxCapacity = 6;
 	
 	// All the above variables are called instance variables. Set to default currently.
 	
 	// This is where we add the constructor by convention (after the instance variables)
+	
+	public Car(){
+		
+	}
 	// Below we use constructor to change default values. We can use all or subset of instance 
 	// variables as parameters for constructors. 
 	public Car(int customMaxSpeed, double customWeight, boolean customIsTheCarOn) {
@@ -50,11 +55,26 @@ public class Car {
 	}
 	
 	public void getIn() {
-		numberOfPeopleInCar += 1;
+		
+		if (numberOfPeopleInCar < maxCapacity){
+			numberOfPeopleInCar += 1;
+			System.out.println("Someone got in");
+		}
+			
+		else
+			System.out.println("Car is already full! "
+					+ "Number of people in the car = " + numberOfPeopleInCar);
 	}
 	
 	public void getOut() {
-		numberOfPeopleInCar--;
+		
+		if (numberOfPeopleInCar > 0){
+			numberOfPeopleInCar--;
+			System.out.println("Someone got out");
+		}
+		else
+			System.out.println("Nobody in the car! "
+					+ "No. of people in the car = " + numberOfPeopleInCar);
 	}
 	
 	public double howManyMilesTillOutOfGas() {
@@ -65,44 +85,32 @@ public class Car {
 		return maxFuel * mpg;
 	}
 	
+	public void turnCarOn() {
+		if (!isTheCarOn){
+			isTheCarOn = true;
+		}
+		else
+			System.out.println("Car already on. isTheCarOn = " + isTheCarOn);
+
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// Main function is where you make everything
 		
-		Car birthdayCar = new Car(200, 5000.54, true);
-		System.out.println("Birthday Car v1");
-		birthdayCar.printVariables();
-		birthdayCar.getIn();
-		birthdayCar.getIn();
-		birthdayCar.getIn();
-		System.out.println("Miles till out of gas = " + birthdayCar.howManyMilesTillOutOfGas());
-		System.out.println("Max miles per fill up = " + birthdayCar.maxMilesPerFillUp());
-		System.out.println(" ");
-		System.out.println("Birthday Car v2");
-		birthdayCar.printVariables();
-		
-		System.out.println(" ");
-		birthdayCar.getOut();
-		System.out.println("Birthday Car v3");
-		birthdayCar.printVariables();
-		
-		System.out.println(" ");
-		
-		int x = 5;
-		int yPost, yPre;
-		
-		System.out.println("xBefore = " + x);
-		System.out.println("");
-		yPost = x++;
-		System.out.println("xIntermediate = " + x);
-		System.out.println("yPost = " + yPost);
-		yPre = ++x;
-		System.out.println("xAfter = " + x);
-		System.out.println("yPre = " + yPre);
-		
-//		System.out.println("Chirstmas Car");
-//		Car christmasCar = new Car(500,  2000, false);
-//		christmasCar.printVariables();
+		Car myCar = new Car();
+		myCar.getOut();
+		myCar.getOut();
+		myCar.getIn();
+		myCar.getIn();
+		myCar.getIn();
+		myCar.getIn();
+		myCar.getIn();
+		myCar.getIn();
+		myCar.getIn();
+		myCar.turnCarOn();
+		myCar.turnCarOn();
+
 	}
 
 }
