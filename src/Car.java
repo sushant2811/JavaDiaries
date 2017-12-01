@@ -35,6 +35,36 @@ public class Car {
 		
 	}
 	
+	// Getters and setters: conventionally put right after the constructors
+	
+	public int getMaxSpeed() {
+		return this.maxSpeed;
+		// return the max speed of this instance of the class. 
+	}
+	
+	public void setMaxSpeed(int newMaxSpeed) {
+		this.maxSpeed = newMaxSpeed; 
+	}
+	
+	public void upgradeMaxSpeed(){
+		// Add 10 to the current max speed.
+		setMaxSpeed(getMaxSpeed() + 10);
+	}
+	
+	public int getMinSpeed() {
+		return this.minSpeed;
+	}
+	
+	public double getWeight() {
+		return this.weight;
+	}
+	
+	public boolean getIsTheCarOn() {
+		return this.isTheCarOn;
+	}
+	
+	
+	
 	// public: scope of the function
 	// void: return type of the 
 	// Following are the examples of instance methods, they work on your instance fields/ variables. 
